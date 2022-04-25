@@ -8,6 +8,7 @@ flake8 = "==4.0.1"
 autopep8 = "==1.6.0"
 livereload = "==2.6.3"
 pyinstaller = "==5.0"
+pysqlite3 = "==0.4.7"
 
 [packages]
 django = "==4.0.4"
