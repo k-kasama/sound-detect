@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: sound-detect
+    command: python /server/manage.py runserver 0.0.0.0:8000
     hostname: sound-detect
     tty: true
     ports:
