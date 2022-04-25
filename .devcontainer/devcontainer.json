@@ -20,10 +20,30 @@
 	"workspaceFolder": "/workspace",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		"python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.linting.flake8Args": [
+            "--ignore=E402,E501"
+        ],
+        "python.formatting.provider": "autopep8",
+        "python.formatting.autopep8Args": [
+            "--ignore",
+            "E402,E501",
+            "--max-line-length",
+            "150"
+        ],
+        "[python]": {
+            "editor.formatOnSave": true
+        }
+	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": []
+	"extensions": [
+		"ms-python.python",
+		"lexcvzz.vscode-sqlite",
+		"ms-pyright.pyright"
+	]
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

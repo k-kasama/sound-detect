@@ -3,6 +3,6 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 WORKDIR /server
-COPY Pipfile /server/
-RUN pip install pipenv && pipenv lock && pipenv install --system
+COPY Pipfile Pipfile.lock /server/
+RUN pip install pipenv && pipenv install --system
 COPY ./backend/ /server
