@@ -1,0 +1,13 @@
+version: "3"
+services:
+  sound-detect:
+    build:
+      context: .
+      dockerfile: ./backend/Dockerfile
+    container_name: sound-detect
+    hostname: sound-detect
+    tty: true
+    ports:
+      - "8000:8000"
+    environment:
+      TZ: 'Asia/Tokyo'
