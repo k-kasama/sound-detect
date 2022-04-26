@@ -5,7 +5,16 @@
     <title></title>
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>{{message}}</p>
+    <h1>音声テストモジュール</h1>
+    <div>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">アップロード</button>
+      </form>
+    </div>
+    <div>
+      {{ title }}
+    </div>
   </body>
 </html>
